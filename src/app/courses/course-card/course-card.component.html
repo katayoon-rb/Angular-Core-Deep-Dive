@@ -1,0 +1,36 @@
+@if (course) {
+<div class="course-card" #container>
+  <div class="course-title">
+    {{ cardIndex || "" + " " + course.description }}
+  </div>
+
+  @if (course.iconUrl) {
+  <ng-content select="course-image" />
+  }
+  <!--  -->
+
+  @if (isEditing) {
+  <div class="course-description">
+    Edit Title:
+    <input
+      #courseTitle
+      [value]="course.description"
+      (keyup)="onTitleChanged(courseTitle.value)"
+    />
+  </div>
+  }
+
+  <div class="course-category">
+    <div class="category" i18n>
+      { course.category, select, BEGINNER {Beginner} INTERMEDIATE {Intermediate}
+      ADVANCED {Advanced} }
+    </div>
+  </div>
+
+  @if (isEditing) {
+  <button (click)="onSaveClicked(courseTitle)">Save Title</button>
+  } @else {
+  <button (click)="onEditTitle()">Edit Title</button>
+  }
+</div>
+}
