@@ -7,10 +7,18 @@
   @if (course.iconUrl) {
   <ng-content select="course-image" />
   }
+
+  <div class="course-description">{{ course.longDescription }}</div>
+
+  @if (course.lessonsCount) {
+  <div class="course-lessonsCount">
+    Total Lessons: {{ course.lessonsCount }}
+  </div>
+  }
   <!--  -->
 
   @if (isEditing) {
-  <div class="course-description">
+  <div class="course-edit">
     Edit Title:
     <input
       #courseTitle
