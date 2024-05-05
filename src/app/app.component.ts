@@ -6,12 +6,18 @@ import { CoursesService } from './courses/courses.service';
 import { CourseCardComponent } from './courses/course-card/course-card.component';
 import { CourseImageComponent } from './courses/course-image/course-image.component';
 import { HighlightedDirective } from './directives/highlighted.directive';
+import { NgxUnlessDirective } from './directives/ngx-unless.directive';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  imports: [CourseCardComponent, CourseImageComponent, HighlightedDirective],
+  imports: [
+    CourseCardComponent,
+    CourseImageComponent,
+    HighlightedDirective,
+    NgxUnlessDirective,
+  ],
   standalone: true,
 })
 export class AppComponent implements OnInit {

@@ -13,7 +13,10 @@
     [course]="course"
     [highlighted]="false"
   >
-    <course-image [src]="course.iconUrl"></course-image>
+    <course-image
+      [src]="course.iconUrl"
+      *ngxUnless="!course.iconUrl"
+    ></course-image>
   </course-card>
   }
 </div>
