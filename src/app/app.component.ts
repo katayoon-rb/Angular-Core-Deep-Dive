@@ -1,6 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { Course } from './model/course';
-import { AppConfig, CONFIG_TOKEN } from './config';
+import { APP_CONFIG, AppConfig, CONFIG_TOKEN } from './config';
 import { COURSES } from '../db-data';
 import { CoursesService } from './courses/courses.service';
 import { CourseCardComponent } from './courses/course-card/course-card.component';
