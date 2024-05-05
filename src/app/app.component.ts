@@ -1,4 +1,4 @@
-import { Component, Inject, Injector, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { Course } from './model/course';
 import { AppConfig, CONFIG_TOKEN } from './config';
 import { COURSES } from '../db-data';
@@ -22,7 +22,6 @@ import { NgxUnlessDirective } from './directives/ngx-unless.directive';
 })
 export class AppComponent implements OnInit {
   courses: Course[] = COURSES;
-
   coursesTotal = this.courses.length;
 
   constructor(
