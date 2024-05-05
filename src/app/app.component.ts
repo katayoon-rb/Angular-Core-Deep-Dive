@@ -5,13 +5,13 @@ import { COURSES } from '../db-data';
 import { CoursesService } from './courses/courses.service';
 import { CourseCardComponent } from './courses/course-card/course-card.component';
 import { CourseImageComponent } from './courses/course-image/course-image.component';
-import { NgForOf } from '@angular/common';
+import { HighlightedDirective } from './directives/highlighted.directive';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  imports: [CourseCardComponent, CourseImageComponent, NgForOf],
+  imports: [CourseCardComponent, CourseImageComponent, HighlightedDirective],
   standalone: true,
 })
 export class AppComponent implements OnInit {
